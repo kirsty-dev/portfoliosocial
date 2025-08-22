@@ -183,4 +183,25 @@ header {
 .nav-links li a:hover {
   color: #fff;
 }
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-center {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+}
 
