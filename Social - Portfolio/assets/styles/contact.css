@@ -1,11 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  background: linear-gradient(to right, #1c1c1c, #787878);
-  color: white;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -21,33 +13,31 @@ html, body {
   color: #fff;
 }
 
+body {
+  background: linear-gradient(to right, #1c1c1c, #787878);
+}
 
+/* Header/Navbar */
 header {
   background: radial-gradient(circle, #ddd 20%, #111 90%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 60px;
-  position: relative;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .logo {
-  font-family: 'Georgia', serif;
   font-size: 24px;
+  font-family: 'Georgia', serif;
   color: #fff;
-}
-
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 100px;
+  gap: 60px;
 }
 
 .nav-links li a {
@@ -68,6 +58,7 @@ header {
   border-radius: 20px;
   font-weight: bold;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .contact-btn:hover {
@@ -76,30 +67,20 @@ header {
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
+/* Contact Content */
 .contact-section {
   padding: 80px 50px;
   max-width: 700px;
 }
 
-.contact-section::after {
-  content: "";
-  position: absolute;
-  right: 25%;
-  top: 200px;
-  width: 400px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-
 .contact-section h1 {
-  font-size: 80px;
+  font-size: 64px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .contact-section h3 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 400;
   color: #f0f0f0;
   margin-bottom: 20px;
@@ -112,15 +93,16 @@ header {
   max-width: 600px;
   line-height: 1.6;
 }
- 
+
+/* Footer */
 .contact-info {
-  margin-top: 48vh;
+  margin-top: 20vh;
   background: white;
   color: black;
   display: flex;
   justify-content: center;
-  gap: 100px;
-  padding: 45px 0;
+  gap: 80px;
+  padding: 45px 20px;
   font-size: 18px;
   flex-wrap: wrap;
   border-top: 1px solid #ccc;
@@ -139,4 +121,39 @@ header {
 
 .contact-item i {
   font-size: 18px;
+}
+
+/* ✅ Media Query Fixes for Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-section h1 {
+    font-size: 42px;
+  }
+
+  .contact-section h3 {
+    font-size: 24px;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+  }
 }
